@@ -45,6 +45,13 @@ jobs:
         env:
           USE_BAZEL_VERSION: ${{ matrix.bazel-version }}
 
+      - name: delete linux_x86_64
+        run: |
+          sed -i.bak 's/\"\/\/toolchains\/platforms:linux_x86_64\",//g' toolchains/toolchains/toolchains.MODULE.bazel
+          sed -i.bak 's/\"\/\/toolchains\/toolchains\/glibc_linux_x86_64:toolchains\",//g' toolchains/toolchains/toolchains.MODULE.bazel
+        env:
+          USE_BAZEL_VERSION: ${{ matrix.bazel-version }}
+
       - name: build wch example
         run: |
           bazel build --curses=no //example:hello_world
