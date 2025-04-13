@@ -76,6 +76,7 @@ jobs:
         with:
           name: hello-world-binary
           path: |
+            bazel-bin/example/hello_world
             bazel-bin/example/hello_world.bin
             bazel-bin/example/hello_world.hex
           retention-days: 14
