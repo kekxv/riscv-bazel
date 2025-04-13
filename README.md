@@ -5,6 +5,8 @@
 - run `bazel build example:hello-world` to build `example/main.cc` targets.
   - if you are using `./bazelisk.sh` , then run `./bazelisk.sh build example:hello-world`. 
 - check the output in `bazel-bin/example/hello_world`.
+- build **hex file**: `bazel build example:hello_world.hex`
+- build **bin file**: `bazel build example:hello_world.bin`
 
 ```log
 INFO: Invocation ID: 1f20e7d2-906c-4b20-9775-2cbb728d0bfa

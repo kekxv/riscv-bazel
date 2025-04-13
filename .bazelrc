@@ -16,12 +16,12 @@ build:remote_private                --spawn_strategy=remote
 build:remote_private                --remote_instance_name=fuse
 
 build:remote                        --config=remote_private
-build:remote                        --remote_executor=远程编译地址
-build:remote                        --remote_cache=远程编译地址
+build:remote                        --remote_executor=grpc://k-server.local.kekxv.com:8980
+build:remote                        --remote_cache=grpc://k-server.local.kekxv.com:8980
 
 
 build:linux-wch-platform            --platforms=//toolchains/platforms:linux_wch
 
-# build                               --config=remote
+build                               --config=remote
 build                               --config=linux-wch-platform
 
